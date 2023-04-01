@@ -3,8 +3,8 @@ import '../App.css'
 import { Link, Outlet } from 'react-router-dom'
 function Navbar(props) {
     const [query, setQuery] = useState("Search")
-    
-    const handleChange=(e)=>{
+
+    const handleChange = (e) => {
         setQuery(e.target.value)
     }
 
@@ -39,10 +39,6 @@ function Navbar(props) {
                         </ul>
                     </div>
                 </div>
-                <form className="d-flex me-3" role="search">
-                    <input onChange={handleChange} value={query} className="form-control me-2" type="search" placeholder={query} aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </nav>
             <Outlet />
         </>
